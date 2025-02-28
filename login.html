@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+  </head>
+  <body style="font-family:'Times New Roman', Times, serif;">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand me-auto" href="#">Job Board</a> -->
+         <img class="logo" src="./images/jobfinder.png" alt="">
+       
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Job Board</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="candidantes.html">Candidantes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- Profile Image and Dropdown (Visible after login) -->
+<div id="profile-dropdown" class="d-none">
+  <img id="profile-img" class="profile-img" src="" alt="Profile Image" data-bs-toggle="dropdown" aria-expanded="false">
+  <ul class="dropdown-menu" aria-labelledby="profile-img" id="profile-dropdown-menu">
+    <!-- Dynamic content will be injected here based on role -->
+  </ul>
+</div>
+
+
+<a href="sign_up.html"  class="login-button mx-lg-2 sign-up-button">Sign Up</a>
+<a href="login.html"  class="login-button login-up-button">Login</a>
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      </div>
+    </nav>
+
+        
+        <div class="login-container">
+
+            <div class="">
+                <h2 class="text-center">Login</h2>
+                <p class="text-center">Create your account to find or post jobs</p>
+                <form class="login-form" onsubmit="Handellogin(event)">
+                    
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" name="username" id="username" class="form-control", placeholder="Enter username", required>
+                            <small id="username-error" class="text-danger d-none"></small> <!-- Error message -->
+                          </div>
+                         
+            
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+                            <small id="password-error" class="text-danger d-none"></small> <!-- Error message -->
+                          </div>
+                
+                          
+                      
+            
+                      <!-- <button type="submit" class="btn btn-primary w-50">Login</button> -->
+                      <div class="d-flex align-items-center justify-content-between w-75">
+                        <button type="submit" class=" login-in-submit-button">Login</button>
+                        <a href="sign_up.html" class="text-primary ms-3 new-user-link">New User? Click Here..</a>
+                      </div>
+                </form>
+            </div>
+            <!-- <div class="col-6">
+                <img class="register-img" src="./images/register.png" alt="">
+            </div>
+             -->
+
+        </div>
+
+
+    <!-- script tag -->
+     <!-- <script src="./jobs.js"></script> -->
+     <!-- <script src="./auth.js"></script> -->
+     <script src="./login.js"></script>
+
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

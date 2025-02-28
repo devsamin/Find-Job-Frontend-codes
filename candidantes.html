@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Job Board</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="candidantes.css">
+  </head>
+  <body style="font-family: 'Times New Roman', Times, serif;">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand me-auto" href="#">Job Board</a> -->
+         <img class="logo" src="./images/jobfinder.png" alt="">
+       
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Job Board</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="candidantes.html">Candidantes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="about.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- Profile Image and Dropdown (Visible after login) -->
+          <div id="profile-dropdown" class="d-none">
+            <img id="profile-img" class="profile-img" src="" alt="Profile Image" data-bs-toggle="dropdown" aria-expanded="false">
+            <ul class="dropdown-menu" aria-labelledby="profile-img" id="profile-dropdown-menu">
+              <!-- Dynamic content will be injected here based on role -->
+            </ul>
+          </div>
+
+
+          <a href="sign_up.html"  class="login-button mx-lg-2 sign-up-button">Sign Up</a>
+          <a href="login.html" class="login-button login-up-button">Login</a>
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      </div>
+    </nav>
+
+    <div class="candidates-section">
+        <h4 class="text-center">Candidates List</h4>
+    
+        <div id="cadidantes-item" class="cadidantes-item">
+            
+        </div>
+
+        
+    </div>
+    <!-- Pagination -->
+    <nav class="d-flex justify-content-center mt-4">
+      <ul class="pagination" id="pagination-container"></ul>
+    </nav>
+    
+
+   
+<!-- animation auto increment -->
+<!-- <section class="counter-section py-5 bg-light">
+  <div class="container text-center">
+      <div class="row">
+          <div class="col-md-3">
+              <div class="counter-box">
+                  <h4 class="text-muted">Jobs</h4>
+                  <hr class="small-line">
+                  <span class="counter text-dark" data-target="1250">0</span>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="counter-box">
+                  <h4 class="text-muted">Members</h4>
+                  <hr class="small-line">
+                  <span class="counter text-dark" data-target="500">0</span>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="counter-box">
+                  <h4 class="text-muted">Resume</h4>
+                  <hr class="small-line">
+                  <span class="counter text-dark" data-target="700">0</span>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="counter-box">
+                  <h4 class="text-muted">Company</h4>
+                  <hr class="small-line">
+                  <span class="counter text-dark" data-target="1250">0</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</section> -->
+
+   <!-- footer section -->
+   <footer class=" text-white pt-4 pb-2">
+    <div class="container">
+      <div class="row">
+        <!-- About Section -->
+        <div class="col-md-4">
+          <h5>About Job Board</h5>
+          <p class="text-white opacity-75">Connecting job seekers with employers efficiently. Find your dream job or hire top talent with ease.</p>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white opacity-75">Home</a></li>
+            <li><a href="candidantes.html" class="text-white opacity-75">Candidantes</a></li>
+            <li><a href="about.html" class="text-white opacity-75">Blog</a></li>
+            <li><a href="contact.html" class="text-white opacity-75">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <p class="text-white opacity-75 mb-1"><i class="fas fa-envelope"></i> abdullahalsamin@gmail.com</p>
+          <p class="text-white opacity-75 mb-1"><i class="fas fa-phone"></i> +016 0369 0189</p>
+          <p class="text-white opacity-75"><i class="fas fa-map-marker-alt"></i> 111 Job Street, City, Country</p>
+          <div class="social-icons">
+            <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary" />
+      <div class="text-center">
+        <p class="mb-0 text-white">&copy; 2025 Job Board. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+    <!-- script tag -->
+    <script src="./candidantes.js"></script>
+    <script src="./jobs.js"></script>
+     <!-- <script src="./auth.js"></script> -->
+     <!-- <script src="./job_details.js"></script> -->
+     <!-- <script src="./login.js"></script> -->
+
+
+     
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    
+
+  </body>
+</html>

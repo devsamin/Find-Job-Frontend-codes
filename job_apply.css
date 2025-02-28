@@ -1,0 +1,90 @@
+
+
+.application-apply-continer{
+    margin-top: 70px;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    position: relative;
+}
+.apply-text{
+    margin-bottom: 37px;
+    font-size: 24px;
+}
+.apply-field{
+    width: 300px;
+  border: 2px solid transparent; /* ✅ বর্ডার ট্রান্সপারেন্ট রাখছি যাতে ব্যাকগ্রাউন্ড ঠিকমতো আসে */
+  border-radius: 0; /* ✅ স্কয়ার বর্ডার */
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  outline: none;
+  box-shadow: none;
+  background: white;
+  transition: border-color 0.3s ease-in-out;
+
+  /* 🎨 Dual Color Border */
+  background-image: linear-gradient(white, white), /* ✅ ব্যাকগ্রাউন্ড */
+  linear-gradient(to right, rgb(235, 127, 162), rgb(99, 11, 141)); /* ✅ গোলাপি + বেগুনি শেড */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+    
+}
+.apply-lable-name{
+    font-family: 'Times New Roman', Times, serif;
+}
+.resume-box{
+    padding: 18px;
+}
+.coverletter-box{
+    padding: 18px;
+}
+.ml{
+    margin-bottom: 7px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.d-none {
+    display: none;
+}
+
+.submit-btn {
+    padding: 18px;
+    margin-left: 19px;
+    width: 170px;
+    height: 40px;
+    background-color: #00a5a5;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}

@@ -1,0 +1,577 @@
+
+
+.navbar-brand{
+  font-size: 28px;
+  font-weight: 500;
+  color: #009970;
+  transition: 0.3s color;
+}
+.navbar{
+  background-color: #fbfcfc;
+  height: 75px;
+}
+
+.login-button{
+    background-color: #009970;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-colour;
+}
+.login-button:hover{
+    background-color: #00b383;
+}
+.logo{
+  width: 135px;
+}
+  
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+  
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+    color: #000;
+  }
+  
+  @media (min-width: 991px) {
+    .nav-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #009978;
+      visibility: hidden;
+      transition: 0.3s ease-in-out;
+    }
+    /* , .nav-link.active::before */
+    .nav-link:hover::before {
+      width: 100%;
+      visibility: visible;
+    }
+  }
+
+
+
+/* .home-container{ */
+  /* margin-top: 200px; */
+/* } */
+.bg-banner-img{
+  width: 100%;
+  height: 500px;
+}
+
+.filter-container{
+  display: flex;
+  justify-content:space-around;
+  margin-top: 30px;
+  border: 1px solid rgb(21, 228, 79);
+  padding: 100px;
+}
+.label-name{
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+.input-box{
+  width: 100%;
+}
+/* up */
+.home-container {
+  position: relative;
+  height: 90vh; /* পুরো স্ক্রিন জুড়ে রাখতে চাইলে */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bg-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.bg-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5; /* ব্যানারের opacity কমাতে */
+}
+
+.content {
+  position: relative;
+  z-index: 2; /* ফিল্টার ফিল্ডকে ব্যানারের উপরে দেখানোর জন্য */
+  /* text-align: center; */
+  color: white; /* টেক্সট সাদা করার জন্য */
+}
+
+.filter-container {
+  background-color: rgba(5, 87, 98, 0.7); /* ফিল্টার ব্যাকগ্রাউন্ড কালো এবং ট্রান্সপারেন্ট */
+  padding: 30px;
+  width:1000px;
+  border-radius: 10px;
+  margin-top: 100px;
+  margin-bottom: -100px;
+  border: none;
+}
+
+.label-name {
+  color: white;
+}
+.bannar-text{
+  margin-bottom: -40px;
+}
+.input-box {
+  padding: 8px;
+  width: 100%;
+  
+}
+.input-box:hover{
+  border: 1px solid #190303;
+}
+
+.btn-primary {
+  padding: 10px 19px;
+  color: white;
+  background-color: #082141;
+  border: none;
+  border-radius: 0px;
+  font-size: 12px;
+
+
+}
+
+.btn-primary:hover {
+  background-color: #082141;
+  border: none;
+}
+
+
+.jobs-container{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card{
+  width: 80%;
+  height: auto;
+  margin-top: 20px;
+  border: 1px solid gray;
+  /* text-align: center; */
+  padding: 10px;
+  box-sizing: border-box;
+}
+.card-image{
+  width: 100px;
+  height: 80px;
+  /* box-shadow: 2px 2px 8px 8px rgb(231, 233, 231); */
+  border-radius: 20px;
+}
+.card-text{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-top: -20px;
+}
+.title-company-name{
+  margin-left: 130px;
+  margin-top: -70px;
+}
+
+.card-btn{
+  height: 30px;
+  border: none;
+  /* border-radius: 9px; */
+  margin-left: 170px;
+  color: white;
+  font-size: 12px;
+  /* border: 2px solid rgb(19, 242, 164); */
+  background-color: #082141;
+}
+.card-btn:hover{
+  background-color: #082141;
+}
+.card-btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+.pagination .page-item .page-link {
+  border-radius: 8px;
+  margin: 0 5px;
+}
+.pagination .page-item.active .page-link {
+  background-color: royalblue;
+  border-color: royalblue;
+  color: white;
+}
+
+footer{
+  margin-top: 9px;
+  padding: 50px;
+  /* background: linear-gradient(66deg, #1CA8C7 -5.25%, #439FA5 46.76%, #4C7D8C 98.77%);; */
+  background-color:#003366;
+}
+.list-unstyled li a{
+  text-decoration: none;
+  margin-left: 18px;
+}
+
+.job-details-container{
+  margin-top: 100px;
+}
+/* .logoandinfo{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+} */
+.comp-img{
+  width: 10%;
+  height: 90px;
+  margin-left: 615px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  /* box-shadow: 4px 4px 6px 6px  #adeaea; */
+}
+.comp-info{
+  text-align: center;
+  margin-top: 10px;
+}
+.apply-btn{
+  width: 100px;
+  padding: 10px;
+  box-shadow: 4px 4px 8px gray;
+  border: none;
+  background-color: #19ecb4;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+.apply-btn:hover{
+  width: 100px;
+  border: none;
+  color: white;
+  background-color: #049871;
+}
+
+
+
+
+
+
+.office-photo-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card-slider {
+  min-width: 220px;
+  height: 100px;
+  margin: 10px;
+}
+
+.swiffy-slider .slider-container {
+  display: flex;
+  justify-content: space-between;
+}
+.dropdown-menu{
+  margin-left: 1200px;
+}
+
+.profile-img{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.job_post_container{
+  margin-top: 80px;
+}
+#job-post-form{
+  width: 50%;
+  margin: auto;
+}
+.job-post-button{
+  /* border: none; */
+  font-size: 17px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 9px;
+  margin-top: 10px;
+  /* background: linear-gradient(); */
+  border: 2px solid rgb(233, 124, 144);
+  background-color: white;
+}
+.job-post-button:hover{
+  background-color: rgb(237, 17, 87);
+    color: white;
+}
+.form-control {
+  width: 700px;
+  border: 2px solid transparent; /* ✅ বর্ডার ট্রান্সপারেন্ট রাখছি যাতে ব্যাকগ্রাউন্ড ঠিকমতো আসে */
+  border-radius: 0; /* ✅ স্কয়ার বর্ডার */
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  box-shadow: none;
+  background: white;
+  transition: border-color 0.3s ease-in-out;
+
+  /* 🎨 Dual Color Border */
+  background-image: linear-gradient(white, white), /* ✅ ব্যাকগ্রাউন্ড */
+  linear-gradient(to right, rgb(235, 127, 162), rgb(99, 11, 141)); /* ✅ গোলাপি + বেগুনি শেড */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+.post-form-title{
+  margin-top: 20px;
+  padding: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+.form-control:focus {
+  box-shadow: none;
+  outline: none;
+  border: 2px solid transparent;
+  background-image: linear-gradient(white, white),
+  linear-gradient(to right, rgb(235, 127, 162), rgb(99, 11, 141));/* ✅ ফোকাস করলে আরেকটু গাঢ় শেড */
+}
+.post-form-title-all{
+  margin-bottom: 8px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#category-select {
+  width: 700px;
+  height: 40px;
+  border: 2px solid transparent;
+  border-radius: 0; /* স্কয়ার লুক */
+  padding: 5px;
+  font-size: 16px;
+  outline: none;
+  box-shadow: none;
+  background: white;
+  transition: border-color 0.3s ease-in-out;
+
+  /* 🎨 Dual Color Border */
+  background-image: linear-gradient(white, white), 
+                    linear-gradient(to right, rgb(235, 127, 162), rgb(99, 11, 141));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  appearance: none; /* ডিফল্ট অ্যারো রিমুভ করতে */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+/* ফোকাস করলে স্টাইল পরিবর্তন হবে */
+#category-select:focus {
+  border: 2px solid transparent;
+  background-image: linear-gradient(white, white),
+                    linear-gradient(to right, rgb(235, 87, 147), rgb(88, 8, 130));
+}
+
+
+
+
+.dropdown-menu{
+  text-align: center;
+}
+
+
+
+
+
+/* Category Section Styling */
+.category {
+  margin-bottom: 20px;
+}
+
+.category .dropdown {
+  position: relative;
+}
+
+.category .dropdown-toggle {
+  background-color: #fafdfd; /* সবুজ রঙ */
+  color: rgb(7, 7, 7);
+  padding: 10px 20px;
+  border-radius: 0px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 150px;
+}
+
+.category .dropdown-toggle:hover {
+  background-color: #fcfffc; /* হোভার অবস্থায় গাঢ় সবুজ রঙ */
+}
+
+.category .dropdown-menu {
+  max-height: 200px; /* ড্রপডাউন মেনুর উচ্চতা সীমিত করা */
+  overflow-y: auto; /* বেশি আইটেম থাকলে স্ক্রলবার দেখানো */
+  background-color: #f8f9fa; /* লাইট ব্যাকগ্রাউন্ড রঙ */
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+}
+
+.category .dropdown-menu li {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.category .dropdown-menu li:hover {
+  background-color: #e9ecef; /* হোভার অবস্থায় হালকা ধূসর রঙ */
+  color: #000;
+}
+
+
+.how-it-works {
+  margin-top: 10px;
+  background-color: #091b3f;
+  color: #ffffff;
+  height: 100vh;
+}
+
+.step-card {
+  margin-top: 100px;
+  background-color: #122859;
+  border-radius: 10px;
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+}
+
+.step-icon {
+  width: 60px;
+  height: auto;
+  filter: invert(1);
+}
+
+
+.counter-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.counter-box {
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.counter-box:hover {
+  transform: scale(1.1);
+}
+
+.counter {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.small-line {
+  width: 50px;
+  height: 3px;
+  background-color: #333;
+  margin: 10px auto;
+}
+
+
+
+
+
+#info-details-container{
+  width: 80%;
+  margin: auto;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+.small-swal-popup {
+  border-radius: 10px; /* নরম কোণা */
+  font-size: 14px; /* Text ছোট ও professional */
+}
+
+
+
+
+/* contact message table */
+.contact-table {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-table h3 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.table-striped th {
+  background-color: #007BFF;
+  color: white;
+  text-align: left;
+}
+
+.table-striped tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.btn-delete {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: darkred;
+}
+
+/* job table  */
+.job-table{
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.from-name-title{
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}

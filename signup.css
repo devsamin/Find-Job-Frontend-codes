@@ -1,0 +1,63 @@
+
+
+
+.sginup-container{
+    margin-top: 100px;
+    width: 100%;
+    
+}
+
+.sginup-form{
+    width: 50%;
+    margin: auto;
+    /* border: 2px solid gray; */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+.form-control{
+    width: 300px;
+    border: 2px solid transparent;
+  background-image: linear-gradient(white, white),
+                    linear-gradient(to right, rgb(235, 87, 147), rgb(88, 8, 130));
+    outline: none; /* নীল আভা বন্ধ করার জন্য */
+    box-shadow: none; /* ইনপুট ক্লিক করার সময় কোনো শ্যাডো বন্ধ করার জন্য */
+}
+.form-control:focus {
+    border-color: rgb(233, 124, 144); /* আপনার কাঙ্ক্ষিত বর্ডার রঙ */
+    outline: none; /* ডিফল্ট আউটলাইন সরানো */
+    box-shadow: none; /* ফোকাস করলে শ্যাডো সরানো */
+}
+#employee-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* ফাঁকা রাখতে */
+}
+
+.employee-fields {
+    display: flex;
+    gap: 10px; /* ইনপুটগুলোর মধ্যে ফাঁকা রাখতে */
+    margin-left: -20px; /* পূর্বের নেগেটিভ মার্জিন সরানো */
+}
+
+.company_logos {
+    display: flex;
+    align-items: center; /* ইনপুটগুলোর উচ্চতা সমান করতে */
+    /* margin-left: 0;  */
+    margin-left: -13px;
+}
+.sign-up-submit-button{
+    width: 100px;
+    margin-left: -79px;
+    border: 2px solid rgb(233, 124, 144);
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
+.sign-up-submit-button:hover{
+    background-color: rgb(237, 17, 87);
+    color: white;
+}
+.already-register-link{
+    margin-right: 190px;
+}

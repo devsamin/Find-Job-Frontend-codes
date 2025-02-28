@@ -1,0 +1,48 @@
+
+
+
+
+
+.login-container{
+    margin-top: 100px;
+    width: 100%;
+    
+}
+
+.login-form{
+    width: 50%;
+    /* margin: auto; */
+    /* border: 2px solid gray; */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    margin-left: 500px;
+}
+
+.login-in-submit-button{
+    width: 100px;
+    border: 2px solid rgb(233, 124, 144);
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
+.new-user-link{
+    margin-right: 190px;
+}
+.form-control{
+    width: 300px;
+    border: 2px solid transparent;
+  background-image: linear-gradient(white, white),
+                    linear-gradient(to right, rgb(235, 87, 147), rgb(88, 8, 130));
+    outline: none; /* নীল আভা বন্ধ করার জন্য */
+    box-shadow: none; /* ইনপুট ক্লিক করার সময় কোনো শ্যাডো বন্ধ করার জন্য */
+}
+.form-control:focus {
+    border-color: rgb(233, 124, 144); /* আপনার কাঙ্ক্ষিত বর্ডার রঙ */
+    outline: none; /* ডিফল্ট আউটলাইন সরানো */
+    box-shadow: none; /* ফোকাস করলে শ্যাডো সরানো */
+}
+.login-in-submit-button:hover{
+    background-color: rgb(237, 17, 87);
+    color: white;
+}
