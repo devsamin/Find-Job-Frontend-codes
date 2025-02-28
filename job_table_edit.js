@@ -87,8 +87,14 @@ const deleteJob = (jobId) => {
         }
     })
     .then(async (res) => {
-        if (res.status === 204 || res.ok) {  // যদি No Content (204) বা OK (200) হয়
-            document.getElementById(`job-row-${jobId}`).remove();
+        if (res.status === 204 || res.ok) {  // 204 (No Content) হলে success
+            console.log("Job deleted successfully!");
+
+            const jobRow = document.getElementById(`job-row-${jobId}`);
+            if (jobRow) {
+                jobRow.remove();  // Only remove if the row exists
+            }
+
             alert("Job deleted successfully!");
         } else {
             const errorData = await res.json().catch(() => null);
@@ -101,4 +107,5 @@ const deleteJob = (jobId) => {
         alert("Something went wrong. Please try again later.");
     });
 };
+
 
