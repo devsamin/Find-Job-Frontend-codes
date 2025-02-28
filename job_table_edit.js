@@ -76,9 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 const deleteJob = (jobId) => {
     const token = localStorage.getItem("token");
+    
     fetch(`https://find-job-v4mq.onrender.com/jobs/list/${jobId}/`, {
         method: "DELETE",
         headers: {
@@ -86,13 +86,14 @@ const deleteJob = (jobId) => {
             "Content-Type": "application/json"
         }
     })
-    .then((res) => {
-        if (res.ok) {
-            // টেবিল থেকে job row মুছে ফেলা হবে
+    .then(async (res) => {
+        if (res.status === 204 || res.ok) {  // যদি No Content (204) বা OK (200) হয়
             document.getElementById(`job-row-${jobId}`).remove();
             alert("Job deleted successfully!");
         } else {
-            alert("Failed to delete job. Please try again.");
+            const errorData = await res.json().catch(() => null);
+            console.error("Delete Error:", errorData);
+            alert(`Failed to delete job: ${errorData?.detail || "Unknown error"}`);
         }
     })
     .catch((error) => {
@@ -100,3 +101,4 @@ const deleteJob = (jobId) => {
         alert("Something went wrong. Please try again later.");
     });
 };
+
