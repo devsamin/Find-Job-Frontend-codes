@@ -75,3 +75,27 @@ document.addEventListener("DOMContentLoaded", function () {
         displayJob();
     });
 });
+
+
+const deleteJob = (jobId) => {
+
+    fetch(`https://find-job-v4mq.onrender.com/jobs/list/${jobId}/`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then((res) => {
+        if (res.ok) {
+            // টেবিল থেকে job row মুছে ফেলা হবে
+            document.getElementById(`job-row-${jobId}`).remove();
+            alert("Job deleted successfully!");
+        } else {
+            alert("Failed to delete job. Please try again.");
+        }
+    })
+    .catch((error) => {
+        console.error("Error:", error);
+        alert("Something went wrong. Please try again later.");
+    });
+};
