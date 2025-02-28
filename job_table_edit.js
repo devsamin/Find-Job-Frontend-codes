@@ -78,10 +78,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 const deleteJob = (jobId) => {
-
+    const token = localStorage.getItem("token");
     fetch(`https://find-job-v4mq.onrender.com/jobs/list/${jobId}/`, {
         method: "DELETE",
         headers: {
+            "Authorization": `Token ${token}`,
             "Content-Type": "application/json"
         }
     })
